@@ -24,13 +24,13 @@ public:
 TEST(ConcretePrototype1, clone){
 	ConcretePrototype1* newP = new ConcretePrototype1(10);
 	Prototype* test2 = newP->clone();
-	EXPECT_EQ("concrete 1: 10", newP.print());
+	EXPECT_EQ("concrete 1: 10", newP->print());
 }
 
 TEST(ConcretePrototype2, clone){
 	ConcretePrototype2* newP = new ConcretePrototype2(10);
 	Prototype* test2 = newP->clone();
-	EXPECT_EQ("concrete 1: 10", newP.print());
+	EXPECT_EQ("concrete 1: 10", newP->print());
 }
 
 int main(int argc, char** argv) {
