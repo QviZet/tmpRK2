@@ -16,7 +16,7 @@ public:
 
 class mockCreator : public PrototypeCreator {
 public:
-    MOCK_METHOD(Prototype*, createPrototype, (Type t), (override));
+    MOCK_METHOD(Prototype*, createPrototype, (Type t), ());
 };
 
 int main(int argc, char** argv) {
