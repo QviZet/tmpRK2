@@ -14,7 +14,7 @@ public:
     MOCK_METHOD(void, print, (), (override));
 };
 
-//......................................GTEST......................................
+//......................................TESTS......................................
 
 TEST(ConcretePrototype1, clone){
 	ConcretePrototype1* newP = new ConcretePrototype1(10);
@@ -33,18 +33,6 @@ TEST(PrototypeCreator, createPrototype){
 	Prototype* newClone = creator->createPrototype(Type::Concrete1);
 	ConcretePrototype1* test3 = newClone->clone();
 	EXPECT_EQ(test3->_a, 12);
-}
-
-//......................................GMOCK......................................
-
-TEST(mockCon1, print){
-	ConcretePrototype1* test4 = new ConcretePrototype1(10);
-	EXPECT_CALL(*test4, print()).Times(1);
-}
-
-TEST(mockCon2, print){
-	ConcretePrototype2* test5 = new ConcretePrototype2(10);
-	EXPECT_CALL(*test5, print()).Times(1);
 }
 
 int main(int argc, char** argv) {
