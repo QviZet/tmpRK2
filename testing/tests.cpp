@@ -39,12 +39,12 @@ TEST(PrototypeCreator, createPrototype){
 
 TEST(mockCon1, print){
 	ConcretePrototype1* test4 = new ConcretePrototype1(10);
-	->EXPECT_CALL(test4, print()).Times(1);
+	EXPECT_CALL(*test4, print()).Times(1);
 }
 
 TEST(mockCon2, print){
 	ConcretePrototype2* test5 = new ConcretePrototype2(10);
-	->EXPECT_CALL(test5, print()).Times(1);
+	EXPECT_CALL(*test5, print()).Times(1);
 }
 
 int main(int argc, char** argv) {
